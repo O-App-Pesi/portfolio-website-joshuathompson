@@ -1,0 +1,233 @@
+#background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: -10;
+  position: absolute;
+  background-color: rgb(232, 231, 231);
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+}
+
+#header {
+  background: rgba(0, 0, 0, 0);
+  border-color: #22162B;
+  border-right-style: dotted;
+  border-top-style: dotted;
+  border-width: 1vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 30vw;
+  height: 5vh;
+  z-index: 1;
+  padding: 1rem;
+  gap: 10px;
+  animation-name: fade-in;
+  animation-duration: 7s;
+}
+#header .fa-house {
+  color: #22162B;
+}
+#header .fa-backward {
+  color: #22162B;
+}
+#header .fa-forward {
+  color: #22162B;
+}
+#header button {
+  border: 0;
+  background: none;
+}
+#header button:hover {
+  cursor: pointer;
+}
+@media (min-width: 700px) {
+  #header {
+    flex-direction: column;
+    width: 5vw;
+    height: 30vh;
+  }
+}
+
+#footer {
+  background: rgba(0, 0, 0, 0);
+  border-color: #22162B;
+  border-bottom-style: dotted;
+  border-left-style: dotted;
+  border-width: 1vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 30vw;
+  height: 5vh;
+  z-index: 1;
+  padding: 1rem;
+  gap: 10px;
+  animation-name: fade-in;
+  animation-duration: 7s;
+}
+#footer .fa-github {
+  color: #22162B;
+}
+#footer .fa-linkedin {
+  color: #22162B;
+}
+#footer .fa-wordpress {
+  color: #22162B;
+}
+#footer button {
+  border: 0;
+  background: none;
+}
+#footer button:hover {
+  cursor: pointer;
+}
+@media (min-width: 700px) {
+  #footer {
+    flex-direction: column;
+    width: 5vw;
+    height: 30vh;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0867e3;
+}
+
+#form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+#form form {
+  background-color: rgba(218, 202, 202, 0.7);
+  color: #22162B;
+  border: solid;
+  border-width: 0.5rem;
+  padding: 4rem 2rem 2rem 2rem;
+  font-family: "Raleway", sans-serif;
+  min-width: 200px;
+}
+#form form .form-elements {
+  flex-direction: column;
+  display: flex;
+  margin-bottom: 1rem;
+}
+#form form .submit-button {
+  display: flex;
+  justify-content: center;
+}
+#form form .submit-button button {
+  background-color: #22162B;
+  color: #D6FF79;
+  font-size: 1rem;
+  padding: 1rem;
+  border: none;
+}
+#form form .bottom-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-family: "Raleway", sans-serif;
+}
+#form form .bottom-links span {
+  padding-top: 2rem;
+}
+#form form .bottom-links:nth-child(even) {
+  padding-bottom: 1rem;
+}
+
+#first {
+  width: 100%;
+  min-height: 25vh;
+  background-color: #D6FF79;
+  max-width: 600px;
+  animation-name: first-animation;
+  animation-delay: 2s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+#second {
+  width: 100%;
+  min-height: 25vh;
+  background-color: #0867e3;
+  max-width: 600px;
+  z-index: -1;
+  animation-delay: 3s;
+  animation-name: first-animation;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+#third {
+  width: 100%;
+  min-height: 25vh;
+  background-color: #FFA552;
+  max-width: 600px;
+  z-index: -2;
+  animation-name: first-animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+#fourth {
+  width: 100%;
+  min-height: 25vh;
+  background-color: #9B1D20;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.5rem;
+  z-index: -3;
+  animation-name: first-animation;
+  animation-delay: 5s;
+  animation-duration: 13s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes first-animation {
+  0% {
+    width: 37.5rem;
+  }
+  25% {
+    width: 18.75rem;
+  }
+  50% {
+    width: 28.125rem;
+  }
+  75% {
+    width: 9.375rem;
+  }
+  100% {
+    width: 37.5rem;
+  }
+}/*# sourceMappingURL=contact.css.map */

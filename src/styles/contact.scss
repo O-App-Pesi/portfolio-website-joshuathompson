@@ -1,0 +1,134 @@
+@import "components/utils";
+@import "defaults/colours";
+@import "components/header";
+@import "components/footer";
+@import "components/index";
+@import "defaults/fonts";
+
+$max-width-div: 600px;
+
+@mixin div-styling() {
+    width: 100%;
+    min-height: 25vh;
+}
+
+a {
+    text-decoration: none;
+    color: $blue-ocean;
+}
+// First Text Component
+#form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position:absolute;
+        form {
+            background-color: rgba(218, 202, 202, 0.7);
+            color: $deep-purple;
+            border: solid;
+            border-width: 0.5rem;
+            padding: 4rem 2rem 2rem 2rem;
+            font-family: $paragraph-font;
+            min-width: 200px;
+                .form-elements {
+                    flex-direction: column;
+                    display: flex;
+                    margin-bottom: 1rem;
+                }
+                .submit-button {
+                    display: flex;
+                    justify-content: center;
+                        button {
+                            background-color: $deep-purple;
+                            color: $sunny-yellow;
+                            font-size: 1rem;
+                            padding: 1rem;
+                            border: none;
+                            // border-radius:
+                        }
+                }
+                .bottom-links {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    font-family: $paragraph-font;
+                        span {
+                            padding-top: 2rem;
+                        }
+                        &:nth-child(even) {
+                            padding-bottom: 1rem;
+                        }
+                }
+        }
+}
+
+#first {
+    @include div-styling();
+    background-color: $sunny-yellow;
+    max-width: $max-width-div;
+    animation-name: first-animation;
+    animation-delay: 2s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+#second {
+    @include div-styling();
+    background-color: $blue-ocean;
+    max-width: $max-width-div;
+    z-index: -1;
+    animation-delay: 3s;
+    animation-name: first-animation;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+#third {
+    @include div-styling();
+    background-color: $sand;
+    max-width: $max-width-div;
+    z-index: -2;
+    animation-name: first-animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+#fourth {
+    @include div-styling();
+    background-color: $burgundy;
+    max-width: $max-width-div;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-family: $paragraph-font;
+    font-size: .5rem;
+    z-index: -3;
+    animation-name: first-animation;
+    animation-delay: 5s;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+
+}
+@keyframes first-animation {
+    0% {
+        width: 37.5rem;
+    }
+    25% {
+        width: 18.75rem;
+    }
+    50% {
+        width: 28.125rem;
+    }
+    75% {
+        width: 9.375rem;
+    }
+    100% {
+        width: 37.5rem;
+    }
+}
+

@@ -1,0 +1,41 @@
+#footer {
+    background: rgba(0, 0, 0, 0);
+    border-color: $deep-purple;
+    border-bottom-style: dotted;
+    border-left-style: dotted;
+    border-width: 1vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    align-items: center;
+    position: fixed;
+    bottom: 0px; left: 0px;
+    width: 30vw;
+    height: 5vh; 
+    z-index: 1;
+    padding: 1rem;
+    gap: 10px;
+    animation-name: fade-in;
+    animation-duration: 7s;
+        .fa-github {
+            color: $deep-purple;
+        }
+        .fa-linkedin {
+            color: $deep-purple
+        }
+        .fa-wordpress {
+            color: $deep-purple;
+        }
+        button {
+            border:0;
+            background:none;
+        }
+        button:hover {
+            cursor: pointer;
+        }
+        @media (min-width: 700px) {
+            flex-direction: column;
+            width: 5vw;
+            height: 30vh;
+        }
+}

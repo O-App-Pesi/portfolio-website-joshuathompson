@@ -1,0 +1,214 @@
+@import "components/utils";
+@import "defaults/colours";
+@import "components/header";
+@import "components/footer";
+@import "components/index";
+@import "defaults/fonts";
+
+$max-width-div: 600px;
+
+@mixin div-styling() {
+    width: 100%;
+}
+@mixin grid-display() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3rem 1fr 1fr 3rem;
+    justify-content: center;
+    align-items: center;
+    font-family: $paragraph-font;
+    color: $deep-purple;
+    font-size: 1rem;
+        @media (max-width: 500px) {
+            font-size: 0.8rem;
+        }
+}
+h2 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    padding: 1rem;
+    font-size: 2rem;
+    z-index: 1;
+}
+h6 {
+    grid-column: 2;
+    grid-row: 4;
+    padding: 1rem;
+    font-size: 1rem;
+}
+article {
+    padding: 1rem;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: $blue-ocean;
+}
+
+@mixin startingposition {
+    top: 10rem; left: 0%;
+}
+// Second Text Component
+#first {
+    @include div-styling();
+    height: 25vh;
+    background-color: $sunny-yellow;
+    max-width: $max-width-div;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+        @import "defaults/mainheading";
+}
+h1:after{
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1vh;
+    background-color: $deep-purple;
+    border-radius: 10px;
+  }
+
+#second {
+    @include div-styling();
+    background-color: $blue-ocean;
+    max-width: $max-width-div;
+    z-index: -1;
+    @include grid-display();
+    color: $sunny-yellow;
+        h2 {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            padding: 1rem;
+            align-self: center;
+        }
+        h6 {
+            grid-column: 2;
+            grid-row: 4;
+            padding: 1rem;
+        }
+        article {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .p1 {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        .p2 {
+            grid-column: 1;
+            grid-row: 3;
+        }
+        .p3 {
+            grid-column: 2;
+            grid-row: 3;
+        }
+}
+// Third Graphical Component
+#third {
+    @include div-styling();
+    @include grid-display();
+    background-color: $sand;
+    max-width: $max-width-div;
+    z-index: -2;
+    article {
+        grid-column: 1;
+        grid-row: 2 / span 2;
+    }
+    .p1 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .p2 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+}
+#fourth {
+    @include div-styling();
+    @include grid-display();
+    color: $sand;
+    background-color: $burgundy;
+    max-width: $max-width-div;
+    z-index: -2;
+    article {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .p1 {
+        grid-column: 1;
+        grid-row: 2 / span 2;
+    }
+    .p2 {
+        grid-column: 2;
+        grid-row: 2
+    }
+}
+#fifth {
+    @include div-styling();
+    @include grid-display();
+    background-color: $sunny-yellow;
+    max-width: $max-width-div;
+    z-index: -2;
+    article {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+    }
+    .p1 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .p2 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
+// Fourth Graphical Component
+#sixth {
+    @include div-styling();
+    @include grid-display();
+    background-color: $blue-ocean;
+    max-width: $max-width-div;
+    z-index: -2;
+    color: $sunny-yellow;
+    img {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 4;
+        padding: 0;
+        object-fit: cover;
+    }
+    .p1 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .p2 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .p3 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+}
+#seventh {
+    @include div-styling();
+    background-color: $sand;
+    color: $deep-purple;
+    max-width: $max-width-div;
+    min-height: 25vh;
+    z-index: -2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-family: $paragraph-font;
+    font-size: 2rem;
+        span {
+            padding: 1rem;
+                @media (max-width: 500px) {
+                    font-size: 1.4rem;
+                }
+        }
+}

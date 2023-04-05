@@ -1,0 +1,41 @@
+// First Graphical Component
+#header {
+    background: rgba(0, 0, 0, 0);
+    border-color: $deep-purple;
+    border-right-style: dotted;
+    border-top-style: dotted;
+    border-width: 1vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px; right: 0px;
+    width: 30vw;
+    height: 5vh; 
+    z-index: 1;
+    padding: 1rem;
+    gap: 10px;
+    animation-name: fade-in;
+    animation-duration: 7s;
+        .fa-house {
+            color: $deep-purple;
+        }
+        .fa-backward {
+            color: $deep-purple;
+        }
+        .fa-forward {
+            color: $deep-purple;
+        }
+        button {
+            border:0;
+            background:none;
+        }
+        button:hover {
+            cursor: pointer;
+        }
+            @media (min-width: 700px) {
+            flex-direction: column;
+            width: 5vw;
+            height: 30vh;
+            }
+}
